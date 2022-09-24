@@ -6,6 +6,7 @@ import Navbar from "./Navbar/Navbar";
 import Services from "./Services/Services";
 import Portfolio from "./Portfolio/Portfolio";
 import Footer from "./Footer/Footer";
+import Cta from "./Cta/Cta";
 export {
   Header,
   About,
@@ -15,4 +16,5 @@ export {
   Services,
   Portfolio,
   Footer,
+  Cta,
 };
