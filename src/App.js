@@ -1,12 +1,24 @@
-
-import './App.css';
+import {
+  Header,
+  Navbar,
+  About,
+  Experience,
+  Footer,
+  Portfolio,
+  Services,
+} from "./components/Index";
 
 function App() {
   return (
-    <div className="App">
-    
-    APP
-    </div>
+    <>
+      <Header />
+      <Navbar />
+      <About />
+      <Experience />
+      <Services />
+      <Portfolio />
+      <Footer />
+    </>
   );
 }
 
