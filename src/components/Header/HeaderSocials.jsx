@@ -9,17 +9,17 @@ const HeaderSocials = () => {
         rel="noreferrer"
         target="_blank"
       >
-        <SiLinkedin />
+        <SiLinkedin size={28}/>
       </a>
       <a href="https://github.com/ZoranUTF8" rel="noreferrer" target="_blank">
-        <BsGithub />
+        <BsGithub size={28}/>
       </a>
       <a
         href="https://www.upwork.com/freelancers/~01f2707e88710c0f01?viewMode=1"
         rel="noreferrer"
         target="_blank"
       >
-        <SiUpwork />
+        <SiUpwork size={28}/>
       </a>
     </div>
   );

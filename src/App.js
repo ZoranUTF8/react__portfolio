@@ -6,6 +6,7 @@ import {
   Footer,
   Portfolio,
   Services,
+  Contacts,
 } from "./components/Index";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Experience />
       <Services />
       <Portfolio />
+      <Contacts />
       <Footer />
     </>
   );
