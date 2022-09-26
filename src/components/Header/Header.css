@@ -51,6 +51,11 @@ header {
   overflow: hidden;
   padding: 0rem 1.5rem;
 }
+.profile_image img {
+  position: relative;
+  bottom: 100px;
+  left: -10px;
+}
 
 /* Scroll down */
 .scroll__down {
@@ -69,6 +74,8 @@ header {
 @media screen and (max-width: 1024px) {
   header {
     height: 100vh;
+  }
+  .profile_image {
   }
 }
 
