@@ -5,7 +5,6 @@ import {
   Experience,
   Footer,
   Portfolio,
-  Services,
   Contacts,
 } from "./components/Index";
 
@@ -16,7 +15,6 @@ function App() {
       <Navbar />
       <About />
       <Experience />
-      <Services />
       <Portfolio />
       <Contacts />
       <Footer />

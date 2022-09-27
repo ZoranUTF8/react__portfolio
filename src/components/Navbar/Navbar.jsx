@@ -20,8 +20,8 @@ const Navbar = () => {
       case "experience":
         setActiveNav("experience");
         break;
-      case "services":
-        setActiveNav("services");
+      case "portfolio":
+        setActiveNav("portfolio");
         break;
       case "contact":
         setActiveNav("contact");
@@ -56,9 +56,9 @@ const Navbar = () => {
         <BiBookBookmark size={28} />
       </a>
       <a
-        href="#services"
-        onClick={() => handleActiveNav("services")}
-        className={activeNav === "services" ? "active" : ""}
+        href="#portfolio"
+        onClick={() => handleActiveNav("portfolio")}
+        className={activeNav === "portfolio" ? "active" : ""}
       >
         <MdOutlineDesignServices size={28} />
       </a>
