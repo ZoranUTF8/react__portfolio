@@ -8,6 +8,9 @@ import {
   Contacts,
 } from "./components/Index";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <>
@@ -18,6 +21,7 @@ function App() {
       <Portfolio />
       <Contacts />
       <Footer />
+      <ToastContainer />
     </>
   );
 }

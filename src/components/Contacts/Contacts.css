@@ -37,6 +37,13 @@ form {
   width: 100%;
 }
 
+form > .notLoading {
+  visibility: hidden;
+}
+form > .loading {
+  color: blue;
+  visibility: visible;
+}
 input,
 textarea {
   width: 100%;

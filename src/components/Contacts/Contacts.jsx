@@ -1,30 +1,52 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import "./Contacts.css";
 import { AiOutlineMail, AiOutlineLinkedin } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import Loading from "../Loading/Loading";
 
 const Contacts = () => {
   const form = useRef();
+  const [loadingState, setLoadingState] = useState(false);
+  const [isActive, setActive] = useState(false);
+  const clearFields = () => {
+    form.current.from_email.value = "";
+    form.current.from_name.value = "";
+    form.current.message.value = "";
+  };
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_YOUR_SERVICE_ID,
-        process.env.REACT_APP_YOUR_TEMPLATE_ID,
-        form.current,
-        process.env.REACT_APP_YOUR_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    setLoadingState(true);
+    setActive(true);
+    try {
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_YOUR_SERVICE_ID,
+          process.env.REACT_APP_YOUR_TEMPLATE_ID,
+          form.current,
+          process.env.REACT_APP_YOUR_PUBLIC_KEY
+        )
+        .then((result) => {
+          if (result.status === 200) {
+            setLoadingState(false);
+            toast.success("Message sent, thank you", {
+              position: "bottom-right",
+              autoClose: 2000,
+            });
+            clearFields();
+            setActive(false);
+          }
+        });
+    } catch (error) {
+      setLoadingState(false);
+      toast.error("Message not sent, please try again.", {
+        position: "bottom-right",
+        autoClose: 2000,
+      });
+      console.log(error);
+    }
   };
 
   return (
@@ -71,7 +93,8 @@ const Contacts = () => {
           </article>
         </div>
 
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={handleSubmit}>
+          <p className={isActive ? "loading" : "notLoading"}>Loading...</p>
           <input
             type="text"
             name="from_name"
@@ -82,7 +105,7 @@ const Contacts = () => {
           <input
             type="email"
             name="from_email"
-            id=""
+            id="email"
             placeholder="Your email"
             required
           />
