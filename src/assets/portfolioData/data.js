@@ -4,6 +4,7 @@ import p3 from "./portfolio3.png";
 import p4 from "./portfolio4.png";
 import p5 from "./portfolio5.png";
 import p6 from "./portfolio6.png";
+import p7 from "./portfolio7.png";
 
 export const projectData = [
   {
@@ -53,5 +54,13 @@ export const projectData = [
     gitLink: "https://github.com/ZoranUTF8/Clinic_Management_System",
     demoLink: null,
     imgPath: p6,
+  },
+  {
+    id: 7,
+    name: "RESTful api",
+    info: "Javascript, node.js",
+    gitLink: "https://github.com/ZoranUTF8/RESTapi_example",
+    demoLink: null,
+    imgPath: p7,
   },
 ];
