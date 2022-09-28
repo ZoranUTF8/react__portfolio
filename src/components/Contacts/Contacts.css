@@ -37,12 +37,30 @@ form {
   width: 100%;
 }
 
-form > .notLoading {
+.content_loading-inactive {
   visibility: hidden;
 }
-form > .loading {
-  color: blue;
+.content_loading-active {
   visibility: visible;
+}
+
+.contact__loading {
+  background: var(--color-bg-variant);
+  width: 100%;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__loading:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
 }
 input,
 textarea {
