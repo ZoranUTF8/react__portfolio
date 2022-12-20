@@ -8,6 +8,7 @@ import p7 from "./portfolio7.png";
 import p8 from "./portfolio8.png";
 import p9 from "./portfolio9.png";
 import p10 from "./portfolio10.png";
+import p11 from "./portfolio11.png";
 
 export const projectData = [
   {
@@ -89,5 +90,13 @@ export const projectData = [
     gitLink: "https://github.com/ZoranUTF8/react_theme_switch",
     demoLink: "https://voluble-genie-253898.netlify.app/",
     imgPath: p10,
+  },
+  {
+    id: 11,
+    name: "Meme generator",
+    info: "Javascript, React.js",
+    gitLink: "https://github.com/ZoranUTF8/react_meme_generator",
+    demoLink: "https://meme-generator23.netlify.app/",
+    imgPath: p11,
   },
 ];
