@@ -7,6 +7,7 @@ import {
   SiExpress,
   SiMaterialui,
   SiMysql,
+  SiReact,
   SiMongodb,
 } from "react-icons/si";
 import { AiOutlineHtml5 } from "react-icons/ai";
@@ -38,6 +39,10 @@ const Experience = () => {
             <article className="experience__details">
               <SiMaterialui size={50} className="experience__details-icon" />
               <h4>Material UI</h4>
+            </article>
+            <article className="experience__details">
+              <SiReact size={50} className="experience__details-icon" />
+              <h4>React</h4>
             </article>
           </div>
         </div>

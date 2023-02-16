@@ -24,7 +24,7 @@ export const projectData = [
     name: "Job tracking",
     info: "Javascript, React.js, Node.js, Mongoose",
     gitLink: "https://github.com/ZoranUTF8/noviPosao_MERN",
-    demoLink: "https://noviposaoapp.herokuapp.com/",
+    demoLink: "https://newjob.onrender.com/",
     imgPath: p2,
   },
   {
@@ -72,7 +72,7 @@ export const projectData = [
     name: "RESTful api",
     info: "Javascript, Node.js",
     gitLink: "https://github.com/ZoranUTF8/RESTapi_example",
-    demoLink: null,
+    demoLink: "https://restapi-example.onrender.com/",
     imgPath: p8,
   },
   {
